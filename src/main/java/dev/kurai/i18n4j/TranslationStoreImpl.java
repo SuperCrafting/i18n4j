@@ -88,7 +88,7 @@ final class TranslationStoreImpl implements TranslationStore {
     this.translations.remove(key, locale);
   }
 
-  private boolean exists(final TranslationKey key, final Locale locale) {
+  public boolean exists(final TranslationKey key, final Locale locale) {
     return this.translations.contains(key, locale);
   }
 

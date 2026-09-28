@@ -119,6 +119,16 @@ public sealed interface TranslationStore permits TranslationStoreImpl {
   void deleteByKeyAndLocale(final TranslationKey key, final Locale locale);
 
   /**
+   * Checks whether a translation exists for the given key and locale.
+   *
+   * @param key the key to check
+   * @param locale the locale to check
+   * @return {@code true} if a translation exists for the given key and locale,
+   *         {@code false} otherwise
+   */
+  boolean exists(final TranslationKey key, final Locale locale);
+
+  /**
    * Returns the translation stored under the given key and locale, or a fallback translation
    * whose content is the key itself if none exists.
    *
