@@ -88,6 +88,7 @@ final class TranslationStoreImpl implements TranslationStore {
     this.translations.remove(key, locale);
   }
 
+  @Override
   public boolean exists(final TranslationKey key, final Locale locale) {
     return this.translations.contains(key, locale);
   }
