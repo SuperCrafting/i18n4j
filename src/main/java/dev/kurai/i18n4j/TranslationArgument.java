@@ -15,7 +15,7 @@ public sealed interface TranslationArgument extends Keyed<String> permits Transl
    * @param value the value to substitute in place of the placeholder
    * @return a new translation argument
    */
-  static TranslationArgument translationArgument(final String key, final String value) {
+  static TranslationArgument translationArgument(final String key, final Object value) {
     return new TranslationArgumentImpl(key, value);
   }
 
@@ -32,5 +32,5 @@ public sealed interface TranslationArgument extends Keyed<String> permits Transl
    *
    * @return the argument value
    */
-  String value();
+  Object value();
 }
