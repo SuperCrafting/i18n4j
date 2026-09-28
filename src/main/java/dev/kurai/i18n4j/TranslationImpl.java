@@ -11,15 +11,4 @@ import java.util.Locale;
  */
 public record TranslationImpl(TranslationKey key, Locale locale, String content)
     implements Translation {
-
-  @Override
-  public String format(final TranslationArgument[] arguments) {
-    String result = this.content;
-
-    for (final TranslationArgument argument : arguments) {
-      result = result.replace('{' + argument.key() + '}', argument.value());
-    }
-
-    return result;
-  }
 }

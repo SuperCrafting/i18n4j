@@ -4,7 +4,7 @@ package dev.kurai.i18n4j;
 public final class TranslationParsers {
 
   /** Parses a translation into its formatted {@link String} content */
-  public static final TranslationParser<String> STRING_PARSER = Translation::format;
+  public static final TranslationParser<String> STRING_PARSER = StringTranslationParser.INSTANCE;
 
   private TranslationParsers() {}
 }

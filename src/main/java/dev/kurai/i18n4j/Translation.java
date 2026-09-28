@@ -40,13 +40,4 @@ public sealed interface Translation extends Keyed<TranslationKey> permits Transl
    * @return the translation content
    */
   String content();
-
-  /**
-   * Formats this translation's {@linkplain #content() content}, substituting each {@code
-   * {key}} placeholder with the value of the matching argument.
-   *
-   * @param arguments the arguments to substitute into the content
-   * @return the formatted content
-   */
-  String format(final TranslationArgument[] arguments);
 }
